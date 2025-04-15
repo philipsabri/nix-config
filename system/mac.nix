@@ -26,7 +26,6 @@
   };
 
   environment.systemPackages = [
-    pkgs.vscode
     pkgs.mkalias
     pkgs.nushell
     pkgs.home-manager
