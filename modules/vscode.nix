@@ -10,7 +10,7 @@ with lib;
   options = {
     module.vscode.enable = mkOption {
       type = types.bool;
-      default = true;
+      default = false;
       description = "Enable Visual Studio Code.";
     };
 

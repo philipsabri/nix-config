@@ -15,7 +15,7 @@ with lib;
     };
     module.nushell.mac = mkOption {
       type = types.bool;
-      default = true;
+      default = false;
       description = "Enable Nushell on macOS.";
     };
   };
