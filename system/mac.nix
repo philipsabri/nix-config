@@ -13,8 +13,6 @@
 
   users.users.philip = {
     shell = pkgs.zsh;
-    name = "philip";
-    home = "/Users/philip";
   };
 
   # Nix Darwin cant set Nushell as default shell

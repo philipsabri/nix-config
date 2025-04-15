@@ -7,9 +7,6 @@
   module.vscode.enable = true;
 
   home = {
-    username = "philip";
-    homeDirectory = "/Users/philip";
-
     sessionVariables = {
       EDITOR = "code";
       SHELL = "nu";

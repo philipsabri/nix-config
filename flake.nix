@@ -47,6 +47,12 @@
           ./system/mac.nix
           home-manager.darwinModules.home-manager
           nix-homebrew.darwinModules.nix-homebrew
+          ({
+            users.users.philip = {
+              name = "philip";
+              home = "/Users/philip";
+            };
+          })
         ];
         specialArgs = {
           inherit self;
