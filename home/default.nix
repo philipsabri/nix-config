@@ -5,6 +5,10 @@
     ../modules/default.nix
   ];
   module.vscode.enable = true;
+  module.nushell = {
+    enable = true;
+    mac = true;
+  };
 
   home = {
     sessionVariables = {
@@ -27,17 +31,6 @@
 
   programs = {
     home-manager.enable = true;
-
-    nushell = {
-      enable = true;
-      shellAliases = {
-        "ll" = "ls -la";
-      };
-      envFile.text = ''
-        $env.GPG_TTY = (tty)
-        $env.SSH_AUTH_SOCK = (gpgconf --list-dirs agent-ssh-socket)
-      '';
-    };
 
     git = {
       enable = true;

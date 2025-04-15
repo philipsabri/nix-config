@@ -10,22 +10,8 @@
   ...
 }:
 {
-
-  users.users.philip = {
-    shell = pkgs.zsh;
-  };
-
-  # Nix Darwin cant set Nushell as default shell
-  programs.zsh = {
-    enable = true;
-    shellInit = ''
-      nu
-    '';
-  };
-
   environment.systemPackages = [
     pkgs.mkalias
-    pkgs.nushell
     pkgs.home-manager
   ];
 
