@@ -5,6 +5,7 @@
     ../modules/default.nix
   ];
   module.vscode.enable = true;
+  module.git.enable = true;
   module.nushell = {
     enable = true;
     mac = true;
@@ -31,23 +32,5 @@
 
   programs = {
     home-manager.enable = true;
-
-    git = {
-      enable = true;
-
-      userName = "Philipsabri";
-      userEmail = "philipsabri@gmail.com";
-
-      extraConfig = {
-        core = {
-          editor = "code --wait";
-        };
-      };
-
-      signing = {
-        key = "A387BEADA856647C";
-        signByDefault = true;
-      };
-    };
   };
 }

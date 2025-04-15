@@ -4,5 +4,6 @@
   imports = [
     ./vscode.nix
     ./nushell.nix
+    ./git.nix
   ];
 }
