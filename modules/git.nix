@@ -27,6 +27,10 @@ with lib;
         core = {
           editor = "code --wait";
         };
+
+        ghq = {
+          root = "~/git";
+        };
       };
 
       signing = {
@@ -34,5 +38,9 @@ with lib;
         signByDefault = true;
       };
     };
+
+    home.packages = [
+      pkgs.ghq
+    ];
   };
 }
