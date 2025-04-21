@@ -32,5 +32,10 @@
 
   programs = {
     home-manager.enable = true;
+    go = {
+      enable = true;
+      goPath = "go";
+      goBin = "go/bin";
+    };
   };
 }
