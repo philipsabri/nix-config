@@ -7,6 +7,7 @@
   homebrew-core,
   homebrew-cask,
   nix-homebrew,
+  home,
   ...
 }:
 {
@@ -51,7 +52,14 @@
     backupFileExtension = "backup";
     useGlobalPkgs = true;
     useUserPackages = true;
-    users.philip = import ../home/default.nix;
+    users.philip = {
+      imports = [ ./../home/default.nix ];
+      home.packages = [
+        pkgs.discord
+        pkgs.spotify
+        pkgs.qbittorrent
+      ];
+    };
   };
 
   system.primaryUser = "philip";
