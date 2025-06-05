@@ -54,6 +54,8 @@
     users.philip = import ../home/default.nix;
   };
 
+  system.primaryUser = "philip";
+
   # pkgs apps will be visible in Spotlight
   system.activationScripts.applications.text =
     let
