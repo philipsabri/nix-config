@@ -61,6 +61,7 @@
         pkgs.kind
         pkgs.ko
         pkgs.dbeaver-bin
+        pkgs.postgresql
       ];
     };
   };
