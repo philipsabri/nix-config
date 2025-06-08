@@ -27,6 +27,7 @@ with lib;
           enable = true;
           shellAliases = {
             "ll" = "ls -la";
+            "k" = "kubectl";
           };
           envFile.text = ''
             $env.GPG_TTY = (tty)
