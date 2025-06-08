@@ -62,6 +62,7 @@
         pkgs.ko
         pkgs.dbeaver-bin
         pkgs.postgresql
+        pkgs.google-cloud-sdk
       ];
     };
   };
