@@ -60,6 +60,7 @@
         pkgs.qbittorrent
         pkgs.kind
         pkgs.ko
+        pkgs.dbeaver-bin
       ];
     };
   };
