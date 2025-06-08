@@ -58,6 +58,7 @@
         pkgs.discord
         pkgs.spotify
         pkgs.qbittorrent
+        pkgs.kind
       ];
     };
   };
