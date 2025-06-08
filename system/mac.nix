@@ -59,6 +59,7 @@
         pkgs.spotify
         pkgs.qbittorrent
         pkgs.kind
+        pkgs.ko
       ];
     };
   };
