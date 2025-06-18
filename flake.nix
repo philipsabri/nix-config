@@ -5,6 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    flake-parts.url = "flake-parts";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -33,32 +34,47 @@
       homebrew-core,
       homebrew-cask,
       nix-vscode-extensions,
+      nixpkgs,
+      flake-parts,
       ...
     }:
-    let
-      systems = [ "aarch64-darwin" ];
-    in
-    {
-      # Build darwin flake using:
-      # $ darwin-rebuild switch --flake ~/nix
-      darwinConfigurations."philips-MacBook-Air" = nix-darwin.lib.darwinSystem {
-        #system = "aarch64-darwin";
-        modules = [
-          ./system/mac.nix
-          home-manager.darwinModules.home-manager
-          nix-homebrew.darwinModules.nix-homebrew
-          ({
-            users.users.philip = {
-              name = "philip";
-              home = "/Users/philip";
-            };
-          })
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = [ "x86_64-linux" ];
+      flake = {
+        homeModules = nixpkgs.lib.mkMerge [
+          #./modules/default.nix
+          #./home/default.nix
+          {
+            user-philip =
+              { pkgs, ... }:
+              {
+                imports = [
+                  ./modules/default.nix
+                ];
+              };
+          }
         ];
-        specialArgs = {
-          inherit self;
-          inherit nix-vscode-extensions;
-          inherit homebrew-core;
-          inherit homebrew-cask;
+        # Build darwin flake using:
+        # $ darwin-rebuild switch --flake ~/nix
+        darwinConfigurations."philips-MacBook-Air" = nix-darwin.lib.darwinSystem {
+          #system = "aarch64-darwin";
+          modules = [
+            ./system/mac.nix
+            home-manager.darwinModules.home-manager
+            nix-homebrew.darwinModules.nix-homebrew
+            ({
+              users.users.philip = {
+                name = "philip";
+                home = "/Users/philip";
+              };
+            })
+          ];
+          specialArgs = {
+            inherit self;
+            inherit nix-vscode-extensions;
+            inherit homebrew-core;
+            inherit homebrew-cask;
+          };
         };
       };
     };
