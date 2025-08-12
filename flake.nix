@@ -55,7 +55,7 @@
           }
         ];
         # Build darwin flake using:
-        # $ darwin-rebuild switch --flake ~/nix
+        # $ darwin-rebuild switch --flake ~/nix/nix-config
         darwinConfigurations."philips-MacBook-Air" = nix-darwin.lib.darwinSystem {
           #system = "aarch64-darwin";
           modules = [
