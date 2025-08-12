@@ -42,8 +42,6 @@
       systems = [ "x86_64-linux" ];
       flake = {
         homeModules = nixpkgs.lib.mkMerge [
-          #./modules/default.nix
-          #./home/default.nix
           {
             user-philip =
               { pkgs, ... }:
@@ -54,7 +52,6 @@
               };
           }
         ];
-        # Build darwin flake using:
         # $ darwin-rebuild switch --flake ~/nix/nix-config
         darwinConfigurations."philips-MacBook-Air" = nix-darwin.lib.darwinSystem {
           #system = "aarch64-darwin";
