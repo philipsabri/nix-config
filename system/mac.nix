@@ -58,11 +58,7 @@
         pkgs.discord
         pkgs.spotify
         pkgs.qbittorrent
-        pkgs.kind
-        pkgs.ko
         pkgs.dbeaver-bin
-        pkgs.postgresql
-        pkgs.google-cloud-sdk
       ];
     };
   };
