@@ -20,8 +20,8 @@ with lib;
     programs.git = {
       enable = true;
 
-      userName = "Philipsabri";
-      userEmail = "philipsabri@gmail.com";
+      userName = lib.mkDefault "Philipsabri";
+      userEmail = lib.mkDefault "philipsabri@gmail.com";
 
       extraConfig = {
         core = {
@@ -34,7 +34,7 @@ with lib;
       };
 
       signing = {
-        key = "A387BEADA856647C";
+        key = lib.mkDefault "A387BEADA856647C";
         signByDefault = true;
       };
     };
