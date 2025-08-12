@@ -10,7 +10,7 @@ with lib;
   options = {
     module.git.enable = mkOption {
       type = types.bool;
-      default = false;
+      default = true;
       description = "Enable Git.";
     };
 
