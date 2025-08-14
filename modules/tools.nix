@@ -38,5 +38,10 @@ with lib;
         ]
       ))
     ];
+    programs = {
+      go = {
+        enable = true;
+      };
+    };
   };
 }
