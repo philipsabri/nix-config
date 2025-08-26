@@ -22,6 +22,7 @@ with lib;
       pkgs.nixfmt-rfc-style
 
       pkgs.kubectl
+      pkgs.kubectx
       pkgs.kubernetes-helm
       pkgs.kind
       pkgs.ko
