@@ -32,9 +32,6 @@ with lib;
       pkgs.terraform
       pkgs.opentofu
 
-      pkgs.libgccjit
-      pkgs.binutils
-
       (pkgs.google-cloud-sdk.withExtraComponents (
         with pkgs.google-cloud-sdk.components;
         [
