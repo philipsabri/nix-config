@@ -24,6 +24,8 @@ with lib;
       userEmail = lib.mkDefault "philipsabri@gmail.com";
 
       extraConfig = {
+        push.autoSetupRemote = true;
+
         core = {
           editor = "code --wait";
         };
