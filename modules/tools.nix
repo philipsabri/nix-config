@@ -36,6 +36,7 @@ with lib;
         with pkgs.google-cloud-sdk.components;
         [
           gke-gcloud-auth-plugin
+          nomos
         ]
       ))
     ];
