@@ -20,10 +20,12 @@ with lib;
     programs.git = {
       enable = true;
 
-      userName = lib.mkDefault "Philipsabri";
-      userEmail = lib.mkDefault "philipsabri@gmail.com";
+      settings = {
+        user = {
+          name = lib.mkDefault "Philipsabri";
+          email = lib.mkDefault "philipsabri@gmail.com";
+        };
 
-      extraConfig = {
         push.autoSetupRemote = true;
 
         core = {
