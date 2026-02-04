@@ -25,7 +25,7 @@
     packages = [
       pkgs.wget
       pkgs.gnupg
-      pkgs.nixfmt-rfc-style
+      pkgs.pkgs.nixfmt
 
       pkgs.kubectl
       pkgs.kubernetes-helm
