@@ -35,6 +35,7 @@ with lib;
               "ll" = "ls -la";
               "k" = "kubectl";
               "update-nix" = "sudo nixos-rebuild switch";
+              "glogin" = "gcloud auth login --update-adc";
             };
             envFile.text = ''
               $env.GPG_TTY = (tty)
