@@ -55,6 +55,13 @@ with lib;
               export extern kubectx [context?: string@__complete_kubectx]
               def __complete_kubens [] { kubens | lines }
               export extern kubens [namespace?: string@__complete_kubens]
+
+              const secrets_file = "~/secrets.nu"
+              const secrets_file_exists = ($secrets_file | path expand | path exists)
+              
+              if $secrets_file_exists {
+                  source $secrets_file
+              }
             '';
           };
         };
