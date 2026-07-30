@@ -59,6 +59,7 @@
         pkgs.spotify
         pkgs.qbittorrent
         pkgs.dbeaver-bin
+        pkgs.yubikey-manager
       ];
     };
   };

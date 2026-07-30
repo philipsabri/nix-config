@@ -58,12 +58,12 @@ with lib;
 
               # --- Source Secrets File if it Exists ---
               const secrets_file_raw = "~/secrets.nu"
-              const secrets_file = if ($secrets_file_raw | path expand | path exists) { 
-                  $secrets_file_raw 
-              } else { 
-                  null 
+              const secrets_file = if ($secrets_file_raw | path expand | path exists) {
+                  $secrets_file_raw
+              } else {
+                  null
               }
-          
+
               source $secrets_file
             '';
           };
