@@ -38,8 +38,10 @@
     home-manager.enable = true;
     go = {
       enable = true;
-      goPath = "go";
-      goBin = "go/bin";
+      env = {
+        GOPATH = "go";
+        GOBIN = "go/bin";
+      };
     };
   };
 }
