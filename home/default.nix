@@ -36,6 +36,9 @@
 
   programs = {
     home-manager.enable = true;
+    opencode = {
+      enable = true;
+    };
     go = {
       enable = true;
       env = {
