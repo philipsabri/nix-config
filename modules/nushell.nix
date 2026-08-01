@@ -34,7 +34,8 @@ with lib;
             shellAliases = {
               "ll" = "ls -la";
               "k" = "kubectl";
-              "update-nix" = "sudo nixos-rebuild switch";
+              "update-nix" =
+                "if (uname | get operating-system) == 'Darwin' { sudo darwin-rebuild switch --flake ~/nix/nix-config } else { sudo nixos-rebuild switch }";
               "glogin" = "gcloud auth login --update-adc";
             };
             envFile.text = ''
