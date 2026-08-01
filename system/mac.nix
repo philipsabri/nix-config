@@ -60,6 +60,7 @@
         pkgs.qbittorrent
         pkgs.dbeaver-bin
         pkgs.yubikey-manager
+        pkgs.raycast-beta
       ];
     };
   };
