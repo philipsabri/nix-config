@@ -39,6 +39,9 @@ with lib;
           "files.trimTrailingWhitespace" = true;
           "files.trimFinalNewlines" = true;
           "files.insertFinalNewline" = true;
+          "chat.agentSkillsLocations" = {
+            "~/git/github.com/philipsabri/skills/skills/" = true;
+          };
         };
         keybindings = [
           {
