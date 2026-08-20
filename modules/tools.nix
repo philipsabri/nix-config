@@ -29,7 +29,6 @@ with lib;
 
       pkgs.postgresql
 
-      pkgs.terraform
       pkgs.opentofu
 
       (pkgs.google-cloud-sdk.withExtraComponents (
